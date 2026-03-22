@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-200 font-body transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white border border-slate-200 shadow-xl rounded-xl dark:bg-slate-900 dark:border-slate-800;
+  }
+  
+  .glass-panel {
+    @apply bg-white/95 backdrop-blur-lg border border-slate-200 shadow-2xl rounded-2xl p-6 dark:bg-slate-900/95 dark:border-slate-800;
+  }
+
+  .btn-primary {
+    @apply flex items-center justify-center bg-amber-600 text-white font-bold py-3 px-6 rounded-lg transition-transform hover:scale-105 active:scale-95 shadow-lg hover:bg-amber-700 dark:bg-amber-500 dark:hover:bg-amber-600;
+  }
+
+  .btn-secondary {
+    @apply flex items-center justify-center bg-transparent border-2 border-amber-600 text-amber-600 font-bold py-3 px-6 rounded-lg transition-colors hover:bg-amber-50 dark:border-amber-500 dark:text-amber-500 dark:hover:bg-amber-900/40;
+  }
+
+  .input-field {
+    @apply w-full bg-slate-100 border border-slate-300 rounded-lg p-3 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all dark:bg-slate-800 dark:border-slate-700 dark:text-slate-100 dark:placeholder-slate-500;
+  }
+  
+  .label-text {
+    @apply block text-sm font-medium text-slate-600 mb-1 dark:text-slate-400 font-mono tracking-wide uppercase text-xs;
+  }
+
+  .form-section {
+    @apply mb-8 bg-slate-50 p-6 rounded-xl border border-slate-200 relative overflow-hidden dark:bg-slate-800/50 dark:border-slate-700;
+  }
+  
+  .form-section::before {
+    content: '';
+    @apply absolute top-0 left-0 w-1 h-full bg-amber-500;
+  }
+}

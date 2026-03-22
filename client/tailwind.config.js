@@ -1,0 +1,18 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  darkMode: 'class',
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['IBM Plex Sans', 'Noto Sans Devanagari', 'Noto Sans Telugu', 'sans-serif'],
+        body: ['IBM Plex Sans', 'sans-serif'],
+        mono: ['IBM Plex Mono', 'monospace'],
+      }
+    },
+  },
+  plugins: [],
+}
